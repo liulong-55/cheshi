@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.obj{
+				width: 300px;height: 300px;
+				background-color: pink;
+				/* display: flex;
+				justify-content: center;
+				align-items: center; */
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="btn" type="button">按钮</button>
+		<div id="aa" class="obj"></div>
+	</body>
+	<script type="text/javascript">
+		var btn=document.getElementById('btn')
+		var t=true;
+		btn.onclick=function(){
+			
+				var obj=document.getElementById('aa')
+				
+					if(t){
+							obj.style.display='block'
+					}else{
+						obj.style.display='none'
+					}
+					t=!t;
+					// 
+				
+		}
+
+		// btn.onclick=function(){
+		// 	confirm('456')
+		// 		// if(typeof(client)!="undefined"){
+		// 		//         var vCon = "";  //分享内容
+		// 		//         var vImg = ""; //分享的图片
+		// 		//         var vNam = ""; //标题
+		// 		//         var vUrl = ""; //跳转的h5链接
+		// 		//     
+		// 		//         client.shareTextImageTarget(vNam,vCon,vImg,vUrl);//调用APP分享、旧版
+		// 		//         client.shareOidType('{$info.ID}','SHOP');
+		// 		// }
+		// 		
+		// }
+		// client.shareTextImageTarget() 
+		// function shopToShare(){
+		//     
+		// }
+
+	</script>
+</html>
+<!-- <!DOCTYPE html>
+<html>
+
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+
+	<body>
+		<div class="bdsharebuttonbox">
+			<a href="#" class="bds_more" data-cmd="more"></a>
+			<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+			<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+			<a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+			<a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+			<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+		</div>
+		<script>
+			window._bd_share_config = { "common": { "bdSnsKey": {}, 
+			"bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", 
+			"bdStyle": "0", "bdSize": "32" }, "share": {},
+			 "image": { "viewList": ["qzone", "tsina", "tqq", "renren", "weixin"],
+			  "viewText": "分享到：",
+			   "viewSize": "16" }, 
+			"selectShare": { "bdContainerClass": null, 
+			"bdSelectMiniList": ["qzone", "tsina", "tqq", "renren", "weixin"] } };
+			with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+		</script>
+
+
+	</body>
+
+
+</html> -->

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>B游汇</title>
+    <link rel="stylesheet" href="__PUBLIC__/css/modules/materialadmin/css/theme-default/bootstrap-1422823238.css" >
+</head>
+<body>
+    <input type="text" name="agent" id="agent"  value="http://www.baiidu.com">
+    <p><a class="button button-round lr-button lr-button-1" id="copy">复制链接</a></p>
+ 
+    <button type="button" class="btn btn-primary" id="copy3">点击复制</button>
+ 
+    <h2>创建模态框（Modal）</h2>
+    <!-- 按钮触发模态框 -->
+    <button class="btn btn-primary btn-lg" data-toggle="modal" >开始演示模态框</button>
+    <!-- 模态框（Modal） -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" id="myModalLabel">模态框（Modal）标题</h4>
+                </div>
+                <div class="modal-body">在这里添加一些文本</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="copy2">点击复制</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+ 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" type="text/javascript" charset="utf-8"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+        $('.btn-lg').click(function(){
+            $('#myModal').modal('show');
+            $('#myModal').on('shown.bs.modal', function () {
+                $('#copy2').zclip({//模态弹出框中实现点击复制
+                    path: "__PUBLIC__/js/modules/materialadmin/libs/zclip/ZeroClipboard.swf",
+                    copy: function(){
+                        return $('#myModalLabel').html();
+                    }
+                });
+            })
+        });
+        $('#copy').zclip({ //a标签中实现点击复制
+            path: "__PUBLIC__/js/modules/materialadmin/libs/zclip/ZeroClipboard.swf",
+            copy: function(){
+                return $('#agent').val();
+            }
+        });
+ 
+        $('#copy3').zclip({ //button中实现点击复制
+            path: "__PUBLIC__/js/modules/materialadmin/libs/zclip/ZeroClipboard.swf",
+            copy: function(){
+                return $('#myModalLabel').html();
+            }
+        });
+    </script>
+</body>
+</html>
